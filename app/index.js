@@ -1,22 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+import App from './app';
+import './src/scss/index.scss';
 
-class App extends React.Component {
-  // state
-  // lifecycle events
-  // UI
-
-  render() {
-    return (
-      <div>
-        Hello Kevin Steele II!
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(
-  <App/>, 
-  document.getElementById('app')
-);
+ReactDOM.render(<App/>, document.getElementById('app'));
