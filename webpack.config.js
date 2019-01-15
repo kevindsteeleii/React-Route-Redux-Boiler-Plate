@@ -11,11 +11,16 @@ module.exports = {
     rules: [
       { test: /test\.js$/, use: 'mocha-loader'},
       { 
+        test: /\.(js|jsx)$/, 
+        exclude:/node_modules/,
+        use: [ 'babel-loader' ]
+      },
+      { 
         test: /\.(js)$/, 
         exclude:/node_modules/,
-        use: [ 'babel-loader', 'eslint-loader' ]
+        use: [ 'eslint-loader' ]
       },
-      { test: /\.(ts|tsx)$/, user: 'ts-loader'},
+      { test: /\.(ts|tsx)$/, use: 'ts-loader'},
       { test: /\.(png|svg|jpg|gif)$/, use: 'file-loader'},
       { test: /\.(css|scss|sass)$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ]}
     ]
