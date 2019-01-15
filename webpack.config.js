@@ -9,10 +9,15 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.(js|jsx)$/, use: 'babel-loader'},
-      { test: /\.(css)$/, use: [ 'style-loader', 'css-loader' ] },
+      { test: /test\.js$/, use: 'mocha-loader'},
+      { 
+        test: /\.(js)$/, 
+        exclude:/node_modules/,
+        use: [ 'babel-loader', 'eslint-loader' ]
+      },
+      { test: /\.(ts|tsx)$/, user: 'ts-loader'},
       { test: /\.(png|svg|jpg|gif)$/, use: 'file-loader'},
-      { test: /\.(scss|sass)$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ]}
+      { test: /\.(css|scss|sass)$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ]}
     ]
   },
   mode: 'development',
