@@ -1,5 +1,5 @@
-# React Boilerplate v 1.0
-A simple boiler plate to create react apps without all the hullabaloo of using create-react-app. And it's a much smaller file.
+# React-Router/Redux Boilerplate v 1.2
+Repo using webpack to create a handy boilerplate for a React/Router/Redux app.
 
 ## Build Notes:
 The webpack config and package.json is configured with a few things in mind:
@@ -8,10 +8,9 @@ The webpack config and package.json is configured with a few things in mind:
   * ES5+
   * JSX
   * Typescript
+  * React, Router & Redux
   * Linting
   * Testing (MochaJS)
-  * React 
-  * ~~(local environment variables)~~
 
 ### References:
   - [Tyler McGinnis Webpack 4 + Babel7 + React  YT video](https://www.youtube.com/watch?v=Zb2mQyQRwqc)
